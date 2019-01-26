@@ -55,15 +55,12 @@ class Game
   def play
     board.reset!
     board.display
-    until over?
-      turn
-    end
     if draw?
       puts "Cat's Game!"
-      break
     elsif won?
       puts "Congratulations #{current_player.token}!"
-      break
+    else
+      turn
     end
   end
 
