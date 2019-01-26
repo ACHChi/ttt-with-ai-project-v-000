@@ -60,8 +60,10 @@ class Game
     end
     if draw?
       puts "Cat's Game!"
+      break
     elsif won?
       puts "Congratulations #{current_player.token}!"
+      break
     end
   end
 
